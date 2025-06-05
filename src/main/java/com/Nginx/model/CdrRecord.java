@@ -19,11 +19,11 @@ public class CdrRecord {
   private CallType callType;
   @ManyToOne()
   @JoinColumn(name = "initiator_number_id", referencedColumnName = "id")
-  private PhoneNumber initiator_id;
+  private PhoneNumber initiator;
   
   @ManyToOne()
   @JoinColumn(name = "recipient_number_id", referencedColumnName = "id")
-  private PhoneNumber recipient_id;
+  private PhoneNumber recipient;
   @Column(nullable = false)
   private LocalDateTime startTime;
   
@@ -31,8 +31,8 @@ public class CdrRecord {
   private LocalDateTime endTime;
   public CdrRecord(CallType callType, PhoneNumber initiator_id, PhoneNumber recipient_id, LocalDateTime startTime, LocalDateTime endTime){
    this.callType = callType;
-   this.initiator_id = initiator_id;
-   this.recipient_id = recipient_id;
+   this.initiator = initiator_id;
+   this.recipient = recipient_id;
    this.startTime = startTime;
    this.endTime = endTime;
   }
