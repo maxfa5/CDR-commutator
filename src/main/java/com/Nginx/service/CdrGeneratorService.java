@@ -37,7 +37,7 @@ public class CdrGeneratorService {
   
   @Transactional
   public void generateCdrPerYear(){
-    int countCals = random.nextInt(11) + 10;
+    int countCals = random.nextInt(110) + 10;
     List<Long> allNumberIds = numbersRepository.findAllIds();
     int totalNumbers = allNumberIds.size();
     for (int i = 0; i < countCals; i++) {
@@ -82,7 +82,7 @@ public class CdrGeneratorService {
   public void generateNumbers(int counts){
     for (int i = 0; i < counts; i++) {
       try {
-        int newNumber = generateRandomPhoneNumber();
+        long newNumber = generateRandomPhoneNumber();
       } catch (DataIntegrityViolationException e) {
         i--;
       } catch (Exception e) {
@@ -91,7 +91,7 @@ public class CdrGeneratorService {
     }
   }
   
-  private int generateRandomPhoneNumber() {
+  private long generateRandomPhoneNumber() {
     // Генерация номера в формате 79XXXXXXXXX (для российских номеров)
     StringBuilder newNumberstr = new StringBuilder("79");
     

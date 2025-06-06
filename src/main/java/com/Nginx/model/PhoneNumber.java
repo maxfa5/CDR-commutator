@@ -8,7 +8,7 @@ import lombok.Data;
 public class PhoneNumber {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private int id;
+  private long id;
   @Column(unique = true, nullable = false)
   private String number;
   public PhoneNumber(String number) {
