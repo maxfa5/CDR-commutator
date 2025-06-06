@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
+/**
+ * Rest Controller для обработки http запросов по пути /api
+ */
 @RestController
 @RequestMapping("/api")
 public class UdrController {

@@ -15,6 +15,9 @@ import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.Random;
 
+/**
+ * Сервис для генерации CDR и номеров телефонов пользователей.
+ */
 @Service
 public class CdrGeneratorService {
   private Random random;

@@ -13,7 +13,9 @@ import java.time.Duration;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-
+/**
+ * Сервис для работы с данными о пользовательских детализированных записях (UDR)
+ */
 @Service
 public class UdrService {
   private NumbersRepository numbersRepository;
